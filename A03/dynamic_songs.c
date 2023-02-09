@@ -37,9 +37,6 @@ int convertSec(int a){
 }
 
 int main (int argc, char *argv[]) { 
-    // struct song_info* songs; 
-    // songs = malloc(sizeof(char));
-    // int num_rows = 18;
     FILE *infile; 
     infile = fopen("songlist.csv", "r"); // r means read in the file
     char row[1000];
@@ -56,11 +53,9 @@ int main (int argc, char *argv[]) {
     int index2 = 0;
     while(!feof(infile)){
       fgets(row, 1000, infile);
-      // printf("Row: %s", row);
       char* token = strtok(row, ",");
       int index = 0 ;
       while (token != NULL){
-        // printf("Token: %s\n", token);
         tokens[index] = token;
         token = strtok(NULL, ",");
         index++;
@@ -81,4 +76,4 @@ int main (int argc, char *argv[]) {
    fclose(infile);
    return 0;
 }
-  
+ 
