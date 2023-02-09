@@ -1,7 +1,9 @@
 /*----------------------------------------------
  * Author: Jonathan Hill
- * Date: Deb. 08, 2023
- * Description
+ * Date: Feb. 08, 2023
+ * Description: This code reads in a csv file and outputs the rows of song
+information into an "attractive" table organized by artist, title,
+duration, danceability, energy, tempo, and valence.
  ---------------------------------------------*/
 #include <stdio.h>
 #include <stdlib.h>

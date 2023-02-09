@@ -1,7 +1,10 @@
 /*----------------------------------------------
  * Author: Jonathan Hill
- * Date: 
- * Description
+ * Date:Feb. 8, 2023 
+ * Description: This code takes in a user pause and user text.
+It then mimicks entwise speech by taking in the user pause input,
+ uses the stored user pause value as the number of dots needed in
+ between each char, and outputting the final string.
  ---------------------------------------------*/
 #include <stdio.h>
 #include <stdlib.h>
