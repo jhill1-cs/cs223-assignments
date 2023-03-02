@@ -1,7 +1,10 @@
 /*----------------------------------------------
- * Author: Jonathan Hill  
+ * Author: Jonathan Hill
  * Date: Mar. 1, 2023
- * Description: 
+ * Description:This program reads in a PPM file
+and ouputs the dimensions, the maximum number of
+characters it can store, and the secret message
+ stored in the least significant bits of each color.
  ---------------------------------------------*/
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,7 +32,7 @@ int main(int argc, char** argv) {
     int message_size = 8;
     int counter = 0;
     int index = 0;
-    message = (char* )malloc((max_char + 1)*sizeof(char)); // fix malloc so it expands
+    message = (char* )malloc((max_char + 1)*sizeof(char)); 
     message[message_index] = '\0';
     unsigned char message_bit = 0;
 
@@ -74,7 +77,7 @@ int main(int argc, char** argv) {
         }
 
 
-      
+
     }
     printf("Max number of characters in the image: %d\n", max_char);
 

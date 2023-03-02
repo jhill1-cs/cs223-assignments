@@ -1,7 +1,9 @@
 /*----------------------------------------------
  * Author:Jonathan Hill
  * Date:Mar. 1, 2023
- * Description
+ * Description:This programs reads in a single 64
+bit unsigned integer and outputs it as an 8x8
+sprite, with "@" denoting 1 and " " denoting 0. 
  ---------------------------------------------*/
 #include <stdio.h>
 
