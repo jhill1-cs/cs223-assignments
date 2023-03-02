@@ -1,6 +1,6 @@
 /*----------------------------------------------
- * Author: 
- * Date: 
+ * Author: Jonathan Hill  
+ * Date: Mar. 1, 2023
  * Description
  ---------------------------------------------*/
 #include <stdio.h>
@@ -14,6 +14,7 @@ int main(int argc, char** argv) {
     printf("usage: encode <file.ppm>\n");
     return 0;
   }
+
 
   return 0;
 }
