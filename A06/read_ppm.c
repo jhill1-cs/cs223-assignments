@@ -1,7 +1,9 @@
 /*----------------------------------------------
  * Author: Jonathan Hill
- * Date:
- * Description:
+ * Date: Mar. 1 , 2023
+ * Description:This program reads in a PPM file
+stored in binary format and returns the width and
+the height stored in the file..
  ---------------------------------------------*/
 #include <stdio.h>
 #include <stdlib.h>
