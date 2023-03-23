@@ -37,9 +37,6 @@ int main(int argc, char* argv[]) {
   // todo: your work here
   struct ppm_pixel* picture;
   picture = (struct ppm_pixel*)malloc(size * size * sizeof(struct ppm_pixel));
-  // for (int i = 0; i < size; i++) {
-  //   picture[i] = (struct ppm_pixel*)malloc(size * sizeof(struct ppm_pixel));
-  // }
 
   // generate pallet
   srand(time(0));
