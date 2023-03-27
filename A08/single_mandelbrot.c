@@ -1,7 +1,7 @@
-Name: Jonathan Hill
+/*Name: Jonathan Hill
 Date: Mar. 22, 2023
 Description: single_mandelbrot.c computes a program that
- outputs a PPM image of the mandelbrot set
+outputs a PPM image of the mandelbrot set*/
 
 #include <stdio.h>
 #include <stdlib.h>

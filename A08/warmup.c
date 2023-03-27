@@ -1,11 +1,12 @@
-Name: Jonathan Hill
+/*Name: Jonathan Hill
 Date: Mar. 22, 2023
 Description: Warmup.c spawns algorithm processes based on
-the image given to us in the assignment description.
+the image given to us in the assignment description.*/
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stddef.h>
 #include <sys/wait.h>
 #include <sys/types.h>
 
