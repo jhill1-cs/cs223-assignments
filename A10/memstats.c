@@ -1,3 +1,10 @@
+/*
+Name: Jonathan Hill
+Date: April 19, 2023
+Description: memstats.c prints the total number of
+memory blocks, total amount of memory, and 
+underutilized memory as a percentage.
+*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -17,6 +24,35 @@ struct chunk {
 };
 
 void memstats(struct chunk* freelist, void* buffer[], int len) {
+  int blocks_used = 0;
+  int memory_use = 0;
+  int blocks_freed = 0;
+  int memory_free = 0;
+  int total_used = 0;
+  float underutilized_percentage;
+
+  for (int i = 0; i < len; i++){
+    if (buffer[i] != NULL){
+      blocks_used += 1;
+      struct chunk* cnk = (struct chunk*)buffer[i]-1;
+      memory_use += cnk->size;
+      total_used += cnk->used;
+    }
+  }
+  struct chunk *next = freelist;
+  while(next!= NULL){
+    blocks_freed += 1; 
+    memory_free += next->size;
+    next = next->next;
+    
+  }
+  underutilized_percentage = (float) (memory_use - total_used) / (memory_use);
+  printf("Total blocks: %d Free blocks: %d Used blocks: %d\n", 
+  (blocks_used + blocks_freed) , blocks_freed , blocks_used);
+  printf("Total memory allocated: %d Free memory: %d Used memory: %d\n", 
+  (memory_free + memory_use), memory_free, memory_use);
+  printf("Underutilized memory: %f\n", underutilized_percentage);
+
 }
 
 int main ( int argc, char* argv[]) {
